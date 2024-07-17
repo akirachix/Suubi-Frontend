@@ -6,22 +6,22 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.brendakhamali.suubi_frontend.databinding.ActivityMainBinding
+import com.brendakhamali.suubi_frontend.databinding.ActivityLoansBinding
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding:ActivityMainBinding
+class loansActivity : AppCompatActivity() {
+    lateinit var binding: ActivityLoansBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityLoansBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.suubitext.setOnClickListener() {
-            val intent = Intent(this,loansActivity::class.java)
+
+        binding.loginon.setOnClickListener {
+            val intent = Intent(this, loginActivity::class.java)
             startActivity(intent)
         }
-        binding.suubilogo.setOnClickListener {
-            val intent = Intent(this,loansActivity::class.java)
+        binding.signcheck.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
     }
 }
-
